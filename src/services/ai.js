@@ -9,7 +9,7 @@
 import { GoogleGenAI } from "@google/genai";
 
 // Gemini API 配置
-const API_KEY = "AIzaSyCS0k2o5WnWagYNWH_Noq_-PzCy9B56Bto";
+const API_KEY = "YOUR_API_KEY";
 const MODEL_NAME = "gemini-2.0-flash"; // 更新為最新的 Gemini 2.0 模型
 
 // 強制使用 API 的標誌 - 設置為 true 則忽略環境檢測始終使用 API
@@ -25,7 +25,7 @@ const shouldUseMock = () => {
   if (FORCE_USE_API) return false;
   
   // 如果未設置 API 金鑰，使用模擬數據
-  if (!API_KEY || API_KEY === "AIzaSyCS0k2o5WnWagYNWH_Noq_-PzCy9B56Bto") return true;
+  if (!API_KEY || API_KEY === "YOUR_API_KEY") return true;
   
   // 在開發環境中使用模擬數據
   return process.env.NODE_ENV === 'development';
